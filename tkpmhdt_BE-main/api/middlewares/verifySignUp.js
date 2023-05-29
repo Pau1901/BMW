@@ -23,7 +23,7 @@ module.exports = {
         return;
       }
     } catch (err) {
-      res.status(500).send({ message: err.message });
+      res.status(500).send({ message: err });
       return;
     }
     next();
@@ -57,7 +57,7 @@ module.exports = {
         });
       }
     } catch (err) {
-      return res.status(500).send({ message: err.message });
+      return res.status(500).send({ message: err });
     }
 
     next();
