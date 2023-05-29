@@ -225,7 +225,7 @@ module.exports = {
       })
       .then(data => {
         if (data.length > 0) {
-          res.json(data);
+          res.send(data);
         } else {
           res.send({
             message: "No books found !",
@@ -245,7 +245,7 @@ module.exports = {
       })
       .then(data => {
         if (data) {
-          res.json(data);
+          res.send(data);
         } else {
           res.send({
             message: `Cannot find Book with id = ${id}.`,
@@ -324,7 +324,7 @@ module.exports = {
       })
       .then(data => {
         if (data.length > 0) {
-          res.json(data);
+          res.send(data);
         } else {
           res.send({
             message: "No books found !",
